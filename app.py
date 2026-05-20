@@ -208,40 +208,8 @@ def load_el_growth_data():
 # ============================================================================
 
 def check_password():
-    if 'authenticated' not in st.session_state:
-        st.session_state.authenticated = False
-    if st.session_state.authenticated:
-        return True
-
-    st.markdown(f"""
-    <div style="text-align: center; padding: 60px 20px;">
-        <h1 style="color: {HI_RED}; font-size: 3rem; margin-bottom: 10px;">VERA-HI</h1>
-        <p style="color: #666; font-size: 1.1rem; margin-bottom: 40px;">
-            Verification Engine for Results &amp; Accountability<br>Hawaii Implementation
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
-
-    col1, col2, col3 = st.columns([1, 2, 1])
-    with col2:
-        password = st.text_input("Enter access code:", type="password", key="pw")
-        if st.button("Access VERA-HI", use_container_width=True):
-            if password == APP_PASSWORD:
-                st.session_state.authenticated = True
-                st.rerun()
-            else:
-                st.error("Invalid access code")
-
-    st.markdown(f"""
-    <div style="text-align: center; margin-top: 60px; color: #999; font-size: 0.85rem;">
-        <p>VERA-HI analyzes ACCESS for ELLs domain data and SBA results across 15 Complex Areas.</p>
-        <p>~12,600 English Learners | ~7% statewide | 1 statewide district (HIDOE)</p>
-        <p>Ilokano, Chuukese, Marshallese, Samoan | Policy 105-14 multilingualism</p>
-        <p>WIDA ACCESS | SBA (Smarter Balanced) | arch.k12.hi.us</p>
-        <p style="margin-top: 10px;">Contact: brian@h-edu.solutions</p>
-    </div>
-    """, unsafe_allow_html=True)
-    return False
+    st.session_state.authenticated = True
+    return True
 
 
 # ============================================================================
