@@ -26,7 +26,7 @@ import plotly.graph_objects as go
 # CONFIGURATION
 # ============================================================================
 
-APP_HI_RED = "#CE1126"
+HI_RED = "#CE1126"
 HI_BLUE = "#002B5C"
 HI_DARK = "#001A3A"
 HI_GRAY = "#4A4A4A"
